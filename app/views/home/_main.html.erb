@@ -112,11 +112,11 @@
 </div>
 	<script type="text/template" id="vb-template">
 	<div class="clearfix"></div>
-    <div class="search-wrapper" id = "2">
-      <a href='[[= url ]]' style='background-image: url('/play.png'); pull-left; display: block; height:50px; background-size: 50px 50px' class="pull-left">
+    <div class="search-wrapper" style="padding: 7px;">
+      <a href='[[= url ]]'><img src="/play.png" style="display: block;" class="pull-left" width="30" height="30"></img></a>
       </a>
       <div class="top-info pull-left">
-        <a href="http://http://voicebunny.com/search/samples/[[= talentID]]" class="title">See more of this voice actor</a>
+        <a href="http://voicebunny.com/search/samples/[[= talentID]]" class="title">See more of this voice actor</a>
       </div>
     </div>
   </script>
@@ -175,8 +175,8 @@
         });
     });
 </script>
-	<div style="position:absolute; background-color: rgba(0,0,0,.7); display:none" id="modal">
-		<div style="color: #111; position: absolute; left: 650px; top: 100px; background-color: #fff;padding: 10px" id="modal-inner">
+	<div style="position:absolute; background-color: rgba(0,0,0,.7); width: 100%; height: 100%; display:none" id="modal">
+		<div style="color: #111; position: absolute; left: 450px; top: 100px; background-color: #fff;padding: 10px;" id="modal-inner">
 			Loading...
 		</div>
 	</div>
