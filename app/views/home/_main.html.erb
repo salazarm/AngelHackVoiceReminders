@@ -23,19 +23,19 @@
 		<h3 onclick = "$('.newrecord').slideToggle(600);" style = "text-align:center; cursor: pointer" class = "newreminder"> New Reminder</h3>
 		<div class = "newrecord" style="color: #efefef;">
 			<%= form_for @reminder, :id=>"reminder_form", :action => :create do |f| %>
-
-			<%= f.select :_type,  options_for_select([['Select', 0],['Upload your own', 1], ['Text to speech', 2], ['Hire voice actor', 3]]), {},{:onchange => "change()", :style => "min-width:250px",:id => "choice_id"} %>
+			<div style = "text-align:center">
+			<%= f.select :_type,  options_for_select([['Select', 0],['Upload your own', 1], ['Text to speech', 2], ['Hire voice actor', 3]]), {},{:onchange => "change()", :style => "min-width:265px; float:left;",:id => "choice_id"} %>
 				<div id="voice-bunny-module" style="display: none;">
 					<div id="search">Search</div>
 						<input id="keywords" placeholder="ex: sexy, cool, etc."></input>
-						<div id="vb-search" class="btn btn-primary" style="margin-top: 10px; cursor: pointer;">Submit</div>
+						<div id="vb-search" class="bluebutton" style="margin-top: 10px; cursor: pointer;">Submit</div>
 						<div id="alternatively" style="height: 30px; padding: 5px;">
 							Alternatively <a href="http://voicebunny.com/">search on VoiceBunny</a>
 						</div>
 					</div>
 				</div>	
 				<div class="record-panel clearfix" id = "recordpanel" style="width:200px;display:none; position: relative; text-align:center">
-					<div><%= f.text_field :file, :style=> "width:250px", :placeholder => "Url to Audio file", :id=> "file"%></div>
+					<div><%= f.text_field :file, :style=> "width:250px;text-align:center", :placeholder => "Url to Audio file", :id=> "file"%></div>
 <!-- 					<div style="width: 100px;  padding: 0px 3px 3px 0px">
 						<canvas id="analyser" width="250" height="40" ></canvas>
 						<canvas id="wavedisplay" width="250" height="40"></canvas>
@@ -45,13 +45,14 @@
 				</div>
 				<div id = "voice" style = "display:none">
 					<div><%= f.select :gender, options_for_select([['Female', 1], ['Male', 2]]), {}, {:style => "min-width:250px"}%></div>
-					<div><%= f.text_area :message, :style => "width:250px",:placeholder => "Enter Message", :size => "20x2" %></div>
+					<div><%= f.text_area :message, :style => "width:250px;text-align:center",:placeholder => "Enter Message", :size => "20x2" %></div>
 				</div>
 				<div id="restt" style="display: none;">
-				  <div><%= f.text_field :playtime, :style => "width:250px",:placeholder => "Select time and date", :id => "playtime" %></div>
+				  <div><%= f.text_field :playtime, :style => "width:250px;text-align:center",:placeholder => "Select time and date", :id => "playtime" %></div>
 
-				   <div><%= f.text_field :number, :style => "width:250px", :placeholder => "Enter Number" %></div>
+				   <div><%= f.text_field :number, :style => "width:250px;text-align:center", :placeholder => "Enter Number" %></div>
 				    <%= f.submit "Create", :id=>"create_reminder" %>
+				</div>
 				</div>
 			<% end %>
 		</div>
@@ -166,7 +167,7 @@
         			type: "POST"
         		});
         	})
-        	$("#feed").append();
+        	$("#feed").append(FeedItemView(reminder));
 
         });
         $("#create_reminder").bind("click", function(e){
