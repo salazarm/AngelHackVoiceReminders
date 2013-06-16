@@ -82,6 +82,7 @@ canvas{
 	padding: 20px;
 	line-height: 26px;
 	margin: 100px;
+
 	background-color: #F4F4F4;
 	opacity: 0.8;
 	height: 350px;
@@ -91,6 +92,8 @@ canvas{
 
 .info p{
 	z-index: 1500;
+	text-align: center;
+	margin-top: 20px;
 	text-align: center;
 }
 .redbutton{

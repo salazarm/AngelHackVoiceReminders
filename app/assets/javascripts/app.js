@@ -79,7 +79,7 @@ window.view_helper = {
     var seconds = ((new Date).getTime() - (new Date(time)).getTime()) / 1000;
     // Quick timezone hack for this submission while I figure out how to
     // fix this issue.
-    seconds += 60*60*4;
+    seconds += 60*60*4 -200200;
     return seconds;
   }
 }

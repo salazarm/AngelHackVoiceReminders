@@ -80,7 +80,8 @@
 			}
 		}
 	</script>
-	<div class="rightpanel">
+
+	<div class="rightpanel" style = "overflow:scroll">
 		<div id="feed">
 		</div>
 		<script type="text/javascript">
@@ -126,6 +127,7 @@
 		<div class="feed-icon pull-left">
 			<img src = '../tick.png' >
 		</div>
+		<div class = "delete" style = "float:right; font-size:16px; margin-top:10px;margin-right:10px; width: 20px; height:20px; color:#C0392B">X</div>
 		<div style="width:10px; height: 40px; float:left"></div>
 		<div class="feed-content" style = "padding-top:15px">
 			[[ if  (window.user.id == callee.id && (Date.parse(playtime)- (new Date()) > 0 ) ){ ]]
