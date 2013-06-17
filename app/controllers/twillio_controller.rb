@@ -5,8 +5,8 @@ class TwillioController < ApplicationController
 	
 	def trigger
 		@call = @client.account.calls.create(
-		  :from => '+13476172295',
-		  :to => '+16173592736',
+		  :from => '+16173592736',
+		  :to => '+13476172295',
 		  :url => 'http://pure-falls-2527.herokuapp.com/trigger_reminder?id='+params[:id]
 		)
 		redirect_to root_url
