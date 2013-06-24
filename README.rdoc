@@ -1,3 +1,6 @@
 == pure-falls-2527.herokuapp.com
 
+Currently the app is hardcoded to call my phone because I am using the trial Twilio account.
+If you wish to actually use the service you can contact me at salazarmlist@mit.edu and I will make this go live.
+
 http://voicebunny.s3.amazonaws.com/live/624A3694C18735F332E2_18223.mp3?h=815138
